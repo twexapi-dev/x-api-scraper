@@ -241,6 +241,12 @@ const page = await client.search.advanced({
 
 The Python SDK exposes the same resource layout. See [all SDKs and tools](#sdks-and-tools).
 
+### Python SDK
+
+```bash
+pip install x_api_scraper
+```
+
 ```python
 import os
 from x_api_scraper import XapiScraper
