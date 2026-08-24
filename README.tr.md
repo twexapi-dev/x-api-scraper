@@ -4,7 +4,7 @@
 
 > TwexAPI bağımsız bir üçüncü taraf hizmetidir. X Corp ile bağlantılı değildir. "Twitter" ve "X", X Corp’un markalarıdır.
 
-TwexAPI bir X (Twitter) Scraper API ve X API alternatifidir. Tweet ara, profilleri oku, takipçileri sayfala ve onaylı hesap işlemleri çalıştır. REST, SDK, MCP, CLI, Skill veya Terraform kullan.
+TwexAPI bir X (Twitter) Scraper API ve X API alternatifidir. Tweet ara, profilleri oku, takipçileri sayfala ve onaylı hesap işlemleri çalıştır. REST, SDK, MCP, CLI, Skill, Terraform veya [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) kullan.
 
 Aşağıdaki istek için `X_API_SCRAPER_KEY` gerekir. Genel okumalar resmi X geliştirici hesabı gerektirmez. DM ve yazmalar için cookie veya `auth_token` da gerekir. X parolası veya 2FA kodu göndermeyin.
 
@@ -50,6 +50,7 @@ npx skills add twexapi-dev/x-api-scraper
 | Go | https://github.com/twexapi-dev/x-api-scraper-go |
 | CLI | https://github.com/twexapi-dev/x-api-scraper-cli |
 | Terraform | https://registry.terraform.io/providers/twexapi-dev/x-api-scraper/latest |
+| Apify | https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2 |
 | Docs | https://docs.twexapi.io |
 
 ## Sık sorulanlar

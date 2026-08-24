@@ -4,7 +4,7 @@
 
 > TwexAPI は独立した第三者サービスです。X Corp とは提携していません。"Twitter" と "X" は X Corp の商標です。
 
-TwexAPI は X（Twitter）Scraper API および X API の代替です。ツイート検索、プロフィール、フォロワー、承認済みのアカウント操作に使えます。REST、型付き SDK、MCP、CLI、Skill、Terraform に対応しています。
+TwexAPI は X（Twitter）Scraper API および X API の代替です。ツイート検索、プロフィール、フォロワー、承認済みのアカウント操作に使えます。REST、型付き SDK、MCP、CLI、Skill、Terraform、[Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) に対応しています。
 
 次のリクエストには `X_API_SCRAPER_KEY` が必要です。公開読み取りに公式 X 開発者アカウントは不要です。DM と書き込みには cookie または `auth_token` が必要です。X のパスワードや 2FA コードは送らないでください。
 
@@ -50,6 +50,7 @@ npx skills add twexapi-dev/x-api-scraper
 | Go | https://github.com/twexapi-dev/x-api-scraper-go |
 | CLI | https://github.com/twexapi-dev/x-api-scraper-cli |
 | Terraform | https://registry.terraform.io/providers/twexapi-dev/x-api-scraper/latest |
+| Apify | https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2 |
 | Docs | https://docs.twexapi.io |
 
 ## よくある質問

@@ -4,7 +4,7 @@
 
 > TwexAPI is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.
 
-TwexAPI is an X (Twitter) Scraper API and X API alternative. Search tweets, read profiles, paginate followers, and run approved account actions. Use REST, typed SDKs, MCP, CLI tools, Skills, or Terraform.
+TwexAPI is an X (Twitter) Scraper API and X API alternative. Search tweets, read profiles, paginate followers, and run approved account actions. Use REST, typed SDKs, MCP, CLI tools, Skills, Terraform, or Apify.
 
 You need an `X_API_SCRAPER_KEY` for the request below. You do not need an official X developer account. Public tweet, profile, search, follower, timeline, reply, quote, and trending reads use the API key only.
 
@@ -67,7 +67,7 @@ Choose TwexAPI when you need several of these together:
 
 - Structured X data with one API key
 - Cursor pagination for search, timelines, replies, quotes, and followers
-- REST, typed SDKs, MCP, CLI, Skill, and Terraform access
+- REST, typed SDKs, MCP, CLI, Skill, Terraform, and Apify access
 - Account actions (post, like, retweet, follow, DM) in the same contract
 
 Choose a smaller lookup API when you need one field from one tweet. Choose a general scraper when HTML is enough. Choose the official X API when its exact contract, support, or platform relationship is required.
@@ -122,8 +122,8 @@ The command discovers `x-api-scraper` and `x-api-scraper-research`.
 | Tweets | Lookup, search, timelines, replies, quotes, threads, likes, retweets, bookmarks, and similar tweets |
 | Profiles | Lookup, search, followers, verified followers, following, and account details |
 | Other X data | Lists, communities, trending, articles, hashtags, cashtags, and sentiment |
-| Delivery | JSON pages over REST, MCP, SDKs, and CLI |
-| Integrations | REST, MCP, Skills, typed SDKs, CLI, and Terraform |
+| Delivery | JSON pages over REST, MCP, SDKs, CLI, and Apify datasets |
+| Integrations | REST, MCP, Skills, typed SDKs, CLI, Terraform, and Apify Actors |
 | X actions | Posts, quotes, threads, deletes, likes, retweets, follows, DMs, and bookmarks |
 
 Deleted, protected, restricted, or unavailable content may stay inaccessible. TwexAPI omits unavailable optional fields. It never invents missing content.
@@ -145,6 +145,7 @@ The npm package `@twexapi-dev/x-developer` contains this Skill and plugin bundle
 | Skill | Agent instructions, safe workflows, and endpoint guidance | Passed to the chosen client |
 | CLI | Shell scripts, terminals, and scheduled jobs | TwexAPI API key |
 | Terraform | Follow, tweet, like, retweet, bookmark, and DM resources | TwexAPI API key |
+| Apify Actor | No-code runs, schedules, datasets, and Apify exports | Apify API token |
 
 Supported public reads need no official X developer account. You do not need to connect or use an X account for those reads. Writes and private DM reads are the exception.
 
@@ -246,6 +247,39 @@ x-api-scraper search tweets "from:elonmusk" --sort Latest
 
 Run `x-api-scraper search tweets --help` before scripting extra flags.
 
+### Apify Actor
+
+The [Tweet(X)/Twitter scraper | $0.05/1K | Pay-Per Result v2](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) Actor accepts this input:
+
+```json
+{
+  "searchTerms": ["from:elonmusk"],
+  "sortBy": "Latest",
+  "maxItems": 25,
+  "minLikes": 0,
+  "minRetweets": 0,
+  "minReplies": 0
+}
+```
+
+Run it in [Apify Console](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) or through the Apify API. It needs an Apify account and token. It needs no TwexAPI API key and no official X developer account.
+
+Apify shows Actor prices by plan. The Store listing currently starts at **$0.05 per 1,000 tweets**. Check the price box before each run. More Actors live on the [fastcrawler store](https://apify.com/fastcrawler).
+
+```js
+import { ApifyClient } from "apify-client";
+
+const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
+const run = await client
+  .actor("fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2")
+  .call({
+    searchTerms: ["from:elonmusk"],
+    sortBy: "Latest",
+    maxItems: 25,
+  });
+const { items } = await client.dataset(run.defaultDatasetId).listItems();
+```
+
 ## Account and agent safety
 
 Agents use only `X_API_SCRAPER_KEY` for supported public reads. Never provide an X password or 2FA code. Accept a cookie or `auth_token` only when the user asked for a write or private DM read and offered it.
@@ -263,6 +297,7 @@ The Skill does not install packages, run local bridge commands, write local file
 | Data team | Paginated search or follower lists | JSON pages for warehouse load |
 | AI agent | MCP and a Skill | Bounded tool result with saved IDs |
 | Operator | CLI with `--dry-run` on writes | Confirmed posts, DMs, or follows |
+| No-code user | Apify Actor | Scheduled dataset or Console export |
 
 Always store tweet IDs, collection times, filters, and cursors. Deduplicate on stable IDs. Keep a lawful purpose and deletion plan for collected data.
 
@@ -273,6 +308,7 @@ Always store tweet IDs, collection times, filters, and cursors. Deduplicate on s
 | TwexAPI | Filtered X data, agents, SDKs, CLI, and X actions | Uses TwexAPI credits and documented limits |
 | Official X API | Official platform contract and first-party support | Requires an official developer account and resource billing |
 | Maintained X data API | Focused lookups through a vendor key | Coverage, schemas, filters, and billing vary |
+| Apify Actor | Console runs, schedules, datasets, and many integrations | Actor and platform charges can both apply |
 | General scraper | Flexible HTML or browser retrieval | You own parsing, pagination, schema drift, and cleanup |
 | Do it yourself | Full control over code and storage | You own browser state, pacing, proxies, breakage, and maintenance |
 
@@ -300,6 +336,10 @@ Copy the returned cursor exactly. Do not decode or construct it. Continue while 
 
 Yes. Pass a cookie or `auth_token` on the write. Confirm the account, target, and payload. Use CLI `--dry-run` when scripting.
 
+### Can I run this without writing code?
+
+Yes. Use the [Apify Tweet scraper](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2). It bills per delivered tweet through Apify. It does not use your TwexAPI API key.
+
 ### Is scraping X data legal?
 
 Usually, yes. Scraping openly accessible X data is generally legal. The method and later use still matter. Check personal data rules, copyright, binding terms, access controls, and local law. Do not bypass login controls. Collect only what you need and delete it on schedule.
@@ -320,6 +360,7 @@ Get qualified advice for regulated, sensitive, or unclear work.
 | PHP | [x-api-scraper-php](https://github.com/twexapi-dev/x-api-scraper-php) |
 | CLI | [x-api-scraper-cli](https://github.com/twexapi-dev/x-api-scraper-cli) |
 | Terraform | [TwexAPI provider](https://registry.terraform.io/providers/twexapi-dev/x-api-scraper/latest) |
+| Apify | [Tweet scraper $0.05/1K](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) |
 
 ## Documentation and support
 
@@ -327,6 +368,7 @@ Get qualified advice for regulated, sensitive, or unclear work.
 - [MCP](https://docs.twexapi.io/mcp/overview)
 - [Dashboard](https://twexapi.io/dashboard)
 - [TypeScript API map](https://github.com/twexapi-dev/x-api-scraper-typescript/blob/main/api.md)
+- [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2)
 
 ## License
 

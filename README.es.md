@@ -4,7 +4,7 @@
 
 > TwexAPI es un servicio independiente de terceros. No está afiliado a X Corp. "Twitter" y "X" son marcas de X Corp.
 
-TwexAPI es una API de scraping de X (Twitter) y una alternativa a la X API. Busca tweets, lee perfiles, pagina seguidores y ejecuta acciones de cuenta confirmadas. Usa REST, SDKs, MCP, CLI, Skills o Terraform.
+TwexAPI es una API de scraping de X (Twitter) y una alternativa a la X API. Busca tweets, lee perfiles, pagina seguidores y ejecuta acciones de cuenta confirmadas. Usa REST, SDKs, MCP, CLI, Skills, Terraform o el [Actor de Apify](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2).
 
 La petición siguiente necesita `X_API_SCRAPER_KEY`. Las lecturas públicas no requieren una cuenta de desarrollador oficial de X. Los DM y las escrituras también necesitan cookie o `auth_token`. Nunca envíes una contraseña de X ni un código 2FA.
 
@@ -50,6 +50,7 @@ npx skills add twexapi-dev/x-api-scraper
 | Go | https://github.com/twexapi-dev/x-api-scraper-go |
 | CLI | https://github.com/twexapi-dev/x-api-scraper-cli |
 | Terraform | https://registry.terraform.io/providers/twexapi-dev/x-api-scraper/latest |
+| Apify | https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2 |
 | Docs | https://docs.twexapi.io |
 
 ## Preguntas frecuentes

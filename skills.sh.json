@@ -12,6 +12,7 @@
       "description": "Search tweets, inspect engagement, or read replies and quotes.",
       "skills": [
         "search-tweets",
+        "apify-tweet-scraper",
         "x-trends",
         "find-viral-tweets",
         "track-hashtags",

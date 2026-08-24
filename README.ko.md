@@ -4,7 +4,7 @@
 
 > TwexAPI는 독립 서드파티 서비스입니다. X Corp와 제휴되어 있지 않습니다. "Twitter"와 "X"는 X Corp의 상표입니다.
 
-TwexAPI는 X(Twitter) Scraper API이자 X API 대안입니다. 트윗 검색, 프로필, 팔로워 페이지네이션, 승인된 계정 작업에 사용합니다. REST, SDK, MCP, CLI, Skill, Terraform을 지원합니다.
+TwexAPI는 X(Twitter) Scraper API이자 X API 대안입니다. 트윗 검색, 프로필, 팔로워 페이지네이션, 승인된 계정 작업에 사용합니다. REST, SDK, MCP, CLI, Skill, Terraform, [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2)을 지원합니다.
 
 아래 요청에는 `X_API_SCRAPER_KEY`가 필요합니다. 공개 읽기에는 공식 X 개발자 계정이 필요 없습니다. DM과 쓰기에는 cookie 또는 `auth_token`이 필요합니다. X 비밀번호나 2FA 코드를 보내지 마세요.
 
@@ -50,6 +50,7 @@ npx skills add twexapi-dev/x-api-scraper
 | Go | https://github.com/twexapi-dev/x-api-scraper-go |
 | CLI | https://github.com/twexapi-dev/x-api-scraper-cli |
 | Terraform | https://registry.terraform.io/providers/twexapi-dev/x-api-scraper/latest |
+| Apify | https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2 |
 | Docs | https://docs.twexapi.io |
 
 ## 자주 묻는 질문

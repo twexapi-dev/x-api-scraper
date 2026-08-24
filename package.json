@@ -35,6 +35,8 @@
     "cursor",
     "rest-api",
     "scraper",
+    "apify",
+    "apify-actor",
     "twexapi"
   ],
   "files": [
