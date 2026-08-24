@@ -93,6 +93,17 @@ Pi can also load the Skills bundled with the TypeScript SDK:
 pi install npm:@twexapi-dev/x-api-scraper
 ```
 
+### LobeHub
+
+Use LobeHub CLI 0.0.48 or later. Sign in, install both Skills, then confirm them:
+
+```bash
+lh login
+lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x-api-scraper
+lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x-api-scraper-research
+lh skill list --source market
+```
+
 ### Codex
 
 Add the marketplace, install the plugin, then confirm it:
