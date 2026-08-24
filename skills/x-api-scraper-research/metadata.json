@@ -1,0 +1,20 @@
+{
+  "version": "0.1.0",
+  "organization": "TwexAPI",
+  "homepage": "https://twexapi.io",
+  "repository": "https://github.com/twexapi-dev/x-api-scraper",
+  "license": "MIT",
+  "abstract": "Bounded public X research reads with TwexAPI. Tweet search, profiles, timelines, threads, followers, trends, communities, and lists. Require explicit approval before DMs or writes. Handle the TwexAPI API key only. Not affiliated with X Corp.",
+  "security": {
+    "defaultMode": "read-only-public-data",
+    "credentialsHandled": ["twexapi-api-key"],
+    "credentialsNeverHandled": ["x-passwords", "2fa-codes", "recovery-codes"],
+    "approvalRequiredFor": ["private-reads", "write-actions"],
+    "untrustedContentBoundaries": true
+  },
+  "references": [
+    "https://twexapi.io/dashboard",
+    "https://docs.twexapi.io",
+    "https://github.com/twexapi-dev/x-api-scraper"
+  ]
+}

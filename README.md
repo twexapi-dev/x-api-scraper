@@ -77,14 +77,14 @@ Choose a smaller lookup API when you need one field from one tweet. Choose a gen
 Install the primary Skill for any compatible agent:
 
 ```bash
-npx skills add twexapi-dev/x-api-scraper
+npx skills@1.5.3 add twexapi-dev/x-api-scraper
 ```
 
 Inspect the shadcn registry item before adding the same Skill:
 
 ```bash
-npx shadcn@latest view twexapi-dev/x-api-scraper/x-api-scraper
-npx shadcn@latest add twexapi-dev/x-api-scraper/x-api-scraper
+npx shadcn@4.18.0 view twexapi-dev/x-api-scraper/x-api-scraper
+npx shadcn@4.18.0 add twexapi-dev/x-api-scraper/x-api-scraper
 ```
 
 Pi can also load the Skills bundled with the TypeScript SDK:
@@ -92,6 +92,17 @@ Pi can also load the Skills bundled with the TypeScript SDK:
 ```bash
 pi install npm:@twexapi-dev/x-api-scraper
 ```
+
+### Claude Code
+
+Add the marketplace, then install the plugin:
+
+```bash
+claude plugin marketplace add twexapi-dev/x-api-scraper
+claude plugin install x-api-scraper@x-api-scraper
+```
+
+Inside Claude Code you can also run `/plugin marketplace add twexapi-dev/x-api-scraper`.
 
 ### LobeHub
 
@@ -125,6 +136,10 @@ gemini skills list
 ```
 
 The command discovers `x-api-scraper` and `x-api-scraper-research`.
+
+### OpenClaw
+
+This repository includes `openclaw.plugin.json`. Point OpenClaw at the repo, then set `X_API_SCRAPER_KEY`. Skills load from `./skills`.
 
 ## TwexAPI resource coverage
 
@@ -226,12 +241,39 @@ const page = await client.search.advanced({
 
 The Python SDK exposes the same resource layout. See [all SDKs and tools](#sdks-and-tools).
 
+```python
+import os
+from x_api_scraper import XapiScraper
+
+with XapiScraper(bearer_auth=os.environ["X_API_SCRAPER_KEY"]) as client:
+    page = client.search.advanced(
+        search_terms=["from:elonmusk"],
+        sort_by="Latest",
+        next_cursor="",
+    )
+```
+
 ### MCP
 
 Connect your MCP client to `https://api.twexapi.io/mcp` with `x-api-key` or Bearer auth. Then:
 
 1. Call `explore` to find the route.
 2. Call `twexapi_request` with a relative path.
+
+Cursor example (`~/.cursor/mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "twexapi": {
+      "url": "https://api.twexapi.io/mcp",
+      "headers": {
+        "x-api-key": "YOUR_KEY"
+      }
+    }
+  }
+}
+```
 
 ```json
 {
@@ -251,7 +293,7 @@ Read the [MCP setup guide](https://docs.twexapi.io/mcp/overview).
 
 ```bash
 npm install -g @twexapi-dev/x-api-scraper-cli
-export X_API_SCRAPER_KEY="${X_API_SCRAPER_KEY}"
+export X_API_SCRAPER_KEY='replace_me'
 
 x-api-scraper search tweets "from:elonmusk" --sort Latest
 ```
@@ -380,6 +422,10 @@ Get qualified advice for regulated, sensitive, or unclear work.
 - [Dashboard](https://twexapi.io/dashboard)
 - [TypeScript API map](https://github.com/twexapi-dev/x-api-scraper-typescript/blob/main/api.md)
 - [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2)
+
+## Contract date
+
+Checked against the SDK OpenAPI on 2026-08-24. That document listed 66 HTTP operations. Recheck volatile prices, limits, versions, and counts before relying on them.
 
 ## License
 

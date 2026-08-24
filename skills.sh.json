@@ -5,7 +5,7 @@
     {
       "title": "Core API",
       "description": "Choose an API key for REST, MCP, or a typed SDK.",
-      "skills": ["x-api-scraper"]
+      "skills": ["x-api-scraper", "x-api-scraper-research"]
     },
     {
       "title": "Tweet search",

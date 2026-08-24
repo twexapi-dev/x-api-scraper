@@ -1,6 +1,7 @@
 ---
 name: x-api-scraper-research
 description: Research public X data with TwexAPI. Use for tweet search, user lookup, profile timelines, threads, followers, trends, communities, and lists. Keep public reads bounded. Require explicit approval before DMs or writes. Not affiliated with X Corp.
+license: MIT
 ---
 
 # TwexAPI social research
@@ -35,7 +36,7 @@ Never request X passwords, cookies, session tokens, recovery codes, or 2FA codes
 | Search tweets | `POST /twitter/advanced_search/page` | `client.search.advanced` |
 | Look up users | `POST /twitter/users` | `client.users.getByUsernames` |
 | Read a profile | `GET /twitter/{screen_name}/about` | `client.users.getAbout` |
-| Read a timeline | `GET /twitter/{screen_name}/timeline/page` | `client.timelines.userPage` |
+| Read a timeline | `POST /twitter/{screen_name}/timeline/page` | `client.timelines.userPage` |
 | Read a thread | `POST /twitter/tweets/thread_by_id` | `client.tweets.thread` |
 | Read followers | `POST /v3/twitter/users/followers` | `client.users.followers.list` |
 | Read following | `POST /v3/twitter/users/following` | `client.users.following.list` |

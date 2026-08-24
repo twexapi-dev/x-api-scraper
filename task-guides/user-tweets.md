@@ -13,7 +13,7 @@ Read an X profile timeline with pagination.
 
 ## Endpoint
 
-`GET /twitter/{screen_name}/timeline/page`
+`POST /twitter/{screen_name}/timeline/page`
 
 SDK: `client.timelines.userPage`. CLI: `x-api-scraper --app prod about <user>` then the timeline command for that profile.
 

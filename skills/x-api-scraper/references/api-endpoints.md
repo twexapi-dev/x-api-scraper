@@ -16,9 +16,9 @@ All requests use `Authorization: Bearer <X_API_SCRAPER_KEY>` unless noted.
 | Followers | `POST /v3/twitter/users/followers` | `client.users.followers.list` |
 | Verified followers | `POST /v3/twitter/users/verified-followers` | `client.users.followers.verified` |
 | Following | `POST /v3/twitter/users/following` | `client.users.following.list` |
-| User timeline page | `GET /twitter/{screen_name}/timeline/page` | `client.timelines.userPage` |
+| User timeline page | `POST /twitter/{screen_name}/timeline/page` | `client.timelines.userPage` |
 | Tweets and replies page | `POST /twitter/tweets-replies/page` | `client.timelines.tweetsAndRepliesPage` |
-| Tweet detail | `GET /v2/tweet/detail` | `client.tweets.detail` |
+| Tweet detail | `POST /v2/tweet/detail` | `client.tweets.detail` |
 | Tweet thread | `POST /twitter/tweets/thread_by_id` | `client.tweets.thread` |
 | Replies page | `POST /twitter/tweets/{tweet_id}/replies/page` | `client.tweets.replies.page` |
 | Similar tweets | `GET /twitter/tweets/{tweet_id}/similar` | `client.tweets.similar` |
@@ -32,7 +32,7 @@ All requests use `Authorization: Bearer <X_API_SCRAPER_KEY>` unless noted.
 | DM history | `POST /v3/twitter/dm-history` | `client.dm.history` |
 | Send DM | `POST /v3/twitter/send-dm` | `client.dm.send` |
 | Create tweet | `POST /twitter/tweets/create` | `client.tweets.actions.create` |
-| Like / unlike | `/twitter/tweets/{tweet_id}/like` | `client.tweets.actions.like` / `unlike` |
+| Like / unlike | `POST` / `DELETE` `/twitter/tweets/{tweet_id}/like` | `client.tweets.actions.like` / `unlike` |
 | Follow / unfollow | `POST /twitter/user/follow` | `client.users.follow` / `unfollow` |
 
 Writes and DMs need a cookie or `auth_token` on the request plus explicit user approval.

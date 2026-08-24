@@ -29,3 +29,12 @@ Writes are marked `read_only: false`. Require explicit approval before posting, 
 ```
 
 Do not paste live keys into chat. Full client examples: https://docs.twexapi.io/mcp/overview
+
+## Claude Code
+
+```bash
+claude plugin marketplace add twexapi-dev/x-api-scraper
+claude plugin install x-api-scraper@x-api-scraper
+```
+
+The plugin wires Skills and the hosted MCP server from this repository.

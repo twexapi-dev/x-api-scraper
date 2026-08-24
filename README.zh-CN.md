@@ -28,7 +28,14 @@ curl --request POST 'https://api.twexapi.io/twitter/advanced_search/page' \
 ## 安装 Skills
 
 ```bash
-npx skills add twexapi-dev/x-api-scraper
+npx skills@1.5.3 add twexapi-dev/x-api-scraper
+```
+
+### Claude Code
+
+```bash
+claude plugin marketplace add twexapi-dev/x-api-scraper
+claude plugin install x-api-scraper@x-api-scraper
 ```
 
 ### LobeHub

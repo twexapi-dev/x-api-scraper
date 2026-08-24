@@ -28,7 +28,15 @@ curl --request POST 'https://api.twexapi.io/twitter/advanced_search/page' \
 ## Skills をインストール
 
 ```bash
-npx skills add twexapi-dev/x-api-scraper
+npx skills@1.5.3 add twexapi-dev/x-api-scraper
+```
+
+### LobeHub
+
+```bash
+lh login
+lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x-api-scraper
+lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x-api-scraper-research
 ```
 
 ## 対応範囲
