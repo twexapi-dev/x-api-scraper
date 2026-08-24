@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0",
+  "organization": "TwexAPI",
+  "homepage": "https://twexapi.io",
+  "repository": "https://github.com/twexapi-dev/x-api-scraper",
+  "license": "MIT",
+  "abstract": "TwexAPI TypeScript SDK and agent guide for Twitter search, tweet scraping, profiles, followers, timelines, replies, threads, DMs, communities, lists, articles, trending, and approved writes. Public reads are the default. Require explicit approval for private reads and writes. Handle the user-issued TwexAPI API key. Never collect X passwords, 2FA codes, or recovery codes. Not affiliated with X Corp.",
+  "security": {
+    "defaultMode": "read-only-public-data",
+    "credentialsHandled": ["twexapi-api-key"],
+    "credentialsNeverHandled": ["x-passwords", "2fa-codes", "recovery-codes"],
+    "approvalRequiredFor": ["private-reads", "write-actions"],
+    "untrustedContentBoundaries": true
+  },
+  "references": [
+    "https://twexapi.io/dashboard",
+    "https://docs.twexapi.io",
+    "https://github.com/twexapi-dev/x-api-scraper",
+    "https://github.com/twexapi-dev/x-api-scraper-typescript"
+  ]
+}

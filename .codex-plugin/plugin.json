@@ -1,0 +1,47 @@
+{
+  "name": "x-api-scraper",
+  "version": "0.1.0",
+  "description": "X (Twitter) Scraper API and X API alternative. You do not need an official X developer account for supported public reads. Includes 66 REST operations. MCP uses explore and twexapi_request. Not affiliated with X Corp.",
+  "author": {
+    "name": "TwexAPI",
+    "url": "https://github.com/twexapi-dev"
+  },
+  "homepage": "https://docs.twexapi.io",
+  "repository": "https://github.com/twexapi-dev/x-api-scraper",
+  "license": "MIT",
+  "keywords": [
+    "twitter",
+    "x-api",
+    "x-api-alternative",
+    "twitter-api-alternative",
+    "mcp-server",
+    "scraper",
+    "twitter-api",
+    "social-media",
+    "ai-agent",
+    "twexapi"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "TwexAPI X Scraper",
+    "shortDescription": "Search and read X data. Confirm every account action. Not affiliated with X Corp.",
+    "longDescription": "Use 66 TwexAPI REST operations or hosted MCP with explore and twexapi_request. SDKs and CLI support application integrations. Confirm account actions. Not affiliated with X Corp.",
+    "developerName": "TwexAPI",
+    "category": "Productivity",
+    "composerIcon": "./assets/icon.svg",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://docs.twexapi.io",
+    "defaultPrompt": [
+      "Search recent X posts with TwexAPI",
+      "Set up the TwexAPI MCP server",
+      "Look up an X profile after confirmation"
+    ],
+    "brandColor": "#0F172A",
+    "screenshots": []
+  }
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "name": "explore",
+    "description": "Search the TwexAPI REST catalog. Find tweet search, user lookup, followers, timelines, DMs, and write routes.",
+    "arguments": [
+      {
+        "name": "query",
+        "type": "string",
+        "desc": "Optional search string over endpoint names, paths, and summaries."
+      },
+      {
+        "name": "category",
+        "type": "string",
+        "desc": "Optional category such as search, users, tweets, followers, or dm."
+      },
+      {
+        "name": "include_writes",
+        "type": "boolean",
+        "desc": "Include routes with side effects. Default false."
+      }
+    ]
+  },
+  {
+    "name": "twexapi_request",
+    "description": "Call an allowlisted TwexAPI REST endpoint with a relative path such as /twitter/advanced_search/page.",
+    "arguments": [
+      {
+        "name": "method",
+        "type": "string",
+        "desc": "HTTP method such as GET or POST."
+      },
+      {
+        "name": "path",
+        "type": "string",
+        "desc": "Relative REST path starting with /."
+      },
+      {
+        "name": "query",
+        "type": "object",
+        "desc": "Optional query parameters."
+      },
+      {
+        "name": "body",
+        "type": "object",
+        "desc": "Optional JSON body."
+      }
+    ]
+  }
+]

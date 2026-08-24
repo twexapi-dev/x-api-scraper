@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "twexapi": {
+      "type": "http",
+      "url": "https://api.twexapi.io/mcp"
+    }
+  }
+}

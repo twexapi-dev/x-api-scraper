@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.twexapi/mcp",
+  "title": "TwexAPI MCP Server",
+  "description": "66 REST operations through explore and twexapi_request. No official X developer account for supported public reads.",
+  "repository": {
+    "url": "https://github.com/twexapi-dev/x-api-scraper",
+    "source": "github"
+  },
+  "websiteUrl": "https://docs.twexapi.io/mcp/overview",
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.twexapi.io/mcp"
+    }
+  ]
+}

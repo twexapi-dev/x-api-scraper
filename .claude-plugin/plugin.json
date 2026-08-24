@@ -1,0 +1,35 @@
+{
+  "name": "x-api-scraper",
+  "version": "0.1.0",
+  "description": "X (Twitter) Scraper API and X API alternative. You do not need an official X developer account for supported public reads. Includes 66 REST operations. MCP uses explore and twexapi_request. Not affiliated with X Corp.",
+  "author": {
+    "name": "TwexAPI",
+    "url": "https://github.com/twexapi-dev"
+  },
+  "homepage": "https://docs.twexapi.io",
+  "repository": "https://github.com/twexapi-dev/x-api-scraper",
+  "license": "MIT",
+  "keywords": [
+    "twitter",
+    "x-api",
+    "x-api-alternative",
+    "twitter-api-alternative",
+    "twitter-scraper-api",
+    "mcp-server",
+    "scraper",
+    "twitter-api",
+    "social-media",
+    "ai-agent",
+    "twexapi"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "TwexAPI API key",
+      "description": "Create an API key at twexapi.io/dashboard.",
+      "sensitive": true
+    }
+  }
+}

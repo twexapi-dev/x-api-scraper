@@ -1,0 +1,43 @@
+{
+  "name": "x-api-scraper",
+  "owner": {
+    "name": "TwexAPI",
+    "email": "support@twexapi.io"
+  },
+  "metadata": {
+    "description": "X (Twitter) Scraper API and X API alternative. You do not need an official X developer account for supported public reads. 66 REST operations and hosted MCP. Not affiliated with X Corp.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "x-api-scraper",
+      "source": "./",
+      "description": "X (Twitter) Scraper API and X API alternative. Use search, followers, SDKs, MCP, and confirmed writes. Not affiliated with X Corp.",
+      "version": "0.1.0",
+      "author": {
+        "name": "TwexAPI"
+      },
+      "homepage": "https://docs.twexapi.io",
+      "repository": "https://github.com/twexapi-dev/x-api-scraper",
+      "license": "MIT",
+      "keywords": [
+        "twitter",
+        "x-api",
+        "x-api-alternative",
+        "twitter-api-alternative",
+        "mcp-server",
+        "scraper",
+        "ai-agent",
+        "twexapi"
+      ],
+      "category": "integrations",
+      "tags": [
+        "twitter",
+        "x",
+        "x-api-alternative",
+        "social-media",
+        "mcp"
+      ]
+    }
+  ]
+}

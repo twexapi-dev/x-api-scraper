@@ -1,0 +1,25 @@
+{
+  "id": "x-api-scraper",
+  "name": "TwexAPI X Developer",
+  "description": "X (Twitter) Scraper API and X API alternative. You do not need an official X developer account for supported public reads. Use REST, MCP, SDKs, CLI, and Skills. Not affiliated with X Corp.",
+  "version": "0.1.0",
+  "skills": ["./skills"],
+  "providerAuthEnvVars": {
+    "twexapi": ["X_API_SCRAPER_KEY"]
+  },
+  "uiHints": {
+    "apiKey": {
+      "label": "TwexAPI API key",
+      "help": "Create an API key on the TwexAPI dashboard.",
+      "sensitive": true,
+      "placeholder": "twexapi_..."
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": { "type": ["string", "object"] }
+    }
+  }
+}

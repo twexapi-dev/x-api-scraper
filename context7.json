@@ -1,0 +1,30 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "TwexAPI X Scraper",
+  "description": "TwexAPI Twitter scraper API, MCP server, SDK, and Skill documentation for an X (Twitter) Scraper API and X API alternative. You do not need an official X developer account for supported public reads. Not affiliated with X Corp.",
+  "branch": "main",
+  "excludeFolders": [
+    ".claude-plugin",
+    "docker-mcp-registry"
+  ],
+  "excludeFiles": [
+    ".DS_Store",
+    ".mcp.json",
+    "LICENSE",
+    "openclaw.plugin.json",
+    "package.json",
+    "server.json",
+    "start.sh",
+    "stub-server.mjs"
+  ],
+  "rules": [
+    "Use README.md for installation, SDK links, API coverage, and MCP setup.",
+    "Use skills/x-api-scraper/SKILL.md as the primary operating guide.",
+    "Use skills/x-api-scraper/references/api-endpoints.md for REST routes and SDK methods.",
+    "Use https://docs.twexapi.io/mcp/overview for current MCP client support.",
+    "Use task-guides/*.md for search, follower, posting, and DM workflows.",
+    "Use commands/*.md for command examples.",
+    "Public reads use X_API_SCRAPER_KEY only. Writes and private DM reads also need a cookie or auth_token after explicit approval."
+  ],
+  "url": "https://github.com/twexapi-dev/x-api-scraper"
+}

@@ -1,0 +1,20 @@
+name: twexapi-remote
+type: remote
+dynamic:
+  tools: true
+meta:
+  category: social-media
+  tags:
+    - social-media
+    - twitter
+    - x
+    - remote
+about:
+  title: TwexAPI
+  description: X (Twitter) Scraper API and X API alternative. You do not need an official X developer account for supported public reads. Includes 66 REST operations and hosted MCP. Not affiliated with X Corp.
+  icon: https://www.google.com/s2/favicons?domain=twexapi.io&sz=64
+source:
+  project: https://github.com/twexapi-dev/x-api-scraper
+remote:
+  transport_type: streamable-http
+  url: https://api.twexapi.io/mcp

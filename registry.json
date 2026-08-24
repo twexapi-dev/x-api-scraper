@@ -1,0 +1,55 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "twexapi",
+  "homepage": "https://docs.twexapi.io",
+  "items": [
+    {
+      "name": "x-api-scraper",
+      "type": "registry:item",
+      "title": "TwexAPI X scraper Skill",
+      "description": "Install the X (Twitter) Scraper API and X API alternative Skill. You do not need an official X developer account for supported public reads. Not affiliated with X Corp.",
+      "files": [
+        {
+          "path": "skills/x-api-scraper/LICENSE",
+          "type": "registry:file",
+          "target": "~/.agents/skills/x-api-scraper/LICENSE"
+        },
+        {
+          "path": "skills/x-api-scraper/SKILL.md",
+          "type": "registry:file",
+          "target": "~/.agents/skills/x-api-scraper/SKILL.md"
+        },
+        {
+          "path": "skills/x-api-scraper/metadata.json",
+          "type": "registry:file",
+          "target": "~/.agents/skills/x-api-scraper/metadata.json"
+        },
+        {
+          "path": "skills/x-api-scraper/references/api-endpoints.md",
+          "type": "registry:file",
+          "target": "~/.agents/skills/x-api-scraper/references/api-endpoints.md"
+        },
+        {
+          "path": "skills/x-api-scraper/references/mcp-setup.md",
+          "type": "registry:file",
+          "target": "~/.agents/skills/x-api-scraper/references/mcp-setup.md"
+        },
+        {
+          "path": "skills/x-api-scraper/references/security.md",
+          "type": "registry:file",
+          "target": "~/.agents/skills/x-api-scraper/references/security.md"
+        },
+        {
+          "path": "skills/x-api-scraper/references/usage.md",
+          "type": "registry:file",
+          "target": "~/.agents/skills/x-api-scraper/references/usage.md"
+        },
+        {
+          "path": "skills/x-api-scraper/references/workflows.md",
+          "type": "registry:file",
+          "target": "~/.agents/skills/x-api-scraper/references/workflows.md"
+        }
+      ]
+    }
+  ]
+}

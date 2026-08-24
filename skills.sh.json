@@ -1,0 +1,45 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Core API",
+      "description": "Choose an API key for REST, MCP, or a typed SDK.",
+      "skills": ["x-api-scraper"]
+    },
+    {
+      "title": "Tweet search",
+      "description": "Search tweets, inspect engagement, or read replies and quotes.",
+      "skills": [
+        "search-tweets",
+        "x-trends",
+        "find-viral-tweets",
+        "track-hashtags",
+        "who-retweeted",
+        "who-quoted",
+        "tweet-replies",
+        "x-articles"
+      ]
+    },
+    {
+      "title": "User data",
+      "description": "Read timelines, followers, lists, and communities.",
+      "skills": [
+        "user-tweets",
+        "extract-followers",
+        "x-lists",
+        "x-communities"
+      ]
+    },
+    {
+      "title": "Publishing",
+      "description": "Publish only after explicit confirmation.",
+      "skills": [
+        "post-tweets",
+        "write-threads",
+        "send-dms",
+        "follow-unfollow"
+      ]
+    }
+  ]
+}

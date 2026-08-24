@@ -1,0 +1,58 @@
+{
+  "name": "@twexapi-dev/x-developer",
+  "version": "0.1.0",
+  "description": "X (Twitter) Scraper API and X API alternative. You do not need an official X developer account for supported public reads. REST, MCP, SDKs, CLI, Skills, and Terraform. Not affiliated with X Corp.",
+  "author": {
+    "name": "TwexAPI",
+    "url": "https://docs.twexapi.io"
+  },
+  "license": "MIT",
+  "homepage": "https://twexapi.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twexapi-dev/x-api-scraper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twexapi-dev/x-api-scraper/issues"
+  },
+  "keywords": [
+    "twitter",
+    "x-api",
+    "twitter-api",
+    "twitter-api-alternative",
+    "x-api-alternative",
+    "twitter-scraper-api",
+    "tweet-search",
+    "twitter-followers",
+    "twitter-trends",
+    "mcp",
+    "mcp-server",
+    "agent-skill",
+    "skills",
+    "ai-agent",
+    "claude-code",
+    "codex",
+    "cursor",
+    "rest-api",
+    "scraper",
+    "twexapi"
+  ],
+  "files": [
+    ".codex-plugin",
+    ".claude-plugin",
+    ".mcp.json",
+    "assets",
+    "commands",
+    "context7.json",
+    "docker-mcp-registry/twexapi-remote",
+    "glama.json",
+    "openclaw.plugin.json",
+    "registry.json",
+    "server.json",
+    "skills",
+    "skills.sh.json",
+    "start.sh",
+    "stub-server.mjs",
+    "task-guides"
+  ]
+}
