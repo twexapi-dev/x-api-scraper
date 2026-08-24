@@ -4,7 +4,7 @@
 
 > TwexAPI is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.
 
-TwexAPI is an X (Twitter) Scraper API and X API alternative. Search tweets, read profiles, paginate followers, and run approved account actions. Use REST, typed SDKs, MCP, CLI tools, Skills, Terraform, n8n, Prefect, or Apify.
+TwexAPI is an X (Twitter) Scraper API and X API alternative. Search tweets, read profiles, paginate followers, and run approved account actions. Use REST, typed SDKs, MCP, CLI tools, Skills, Terraform, n8n, Prefect, Haystack, or Apify.
 
 You need an `X_API_SCRAPER_KEY` for the request below. You do not need an official X developer account. Public tweet, profile, search, follower, timeline, reply, quote, and trending reads use the API key only.
 
@@ -67,7 +67,7 @@ Choose TwexAPI when you need several of these together:
 
 - Structured X data with one API key
 - Cursor pagination for search, timelines, replies, quotes, and followers
-- REST, typed SDKs, MCP, CLI, Skill, Terraform, n8n, Prefect, and Apify access
+- REST, typed SDKs, MCP, CLI, Skill, Terraform, n8n, Prefect, Haystack, and Apify access
 - Account actions (post, like, retweet, follow, DM) in the same contract
 
 Choose a smaller lookup API when you need one field from one tweet. Choose a general scraper when HTML is enough. Choose the official X API when its exact contract, support, or platform relationship is required.
@@ -148,8 +148,8 @@ This repository includes `openclaw.plugin.json`. Point OpenClaw at the repo, the
 | Tweets | Lookup, search, timelines, replies, quotes, threads, likes, retweets, bookmarks, and similar tweets |
 | Profiles | Lookup, search, followers, verified followers, following, and account details |
 | Other X data | Lists, communities, trending, articles, hashtags, cashtags, and sentiment |
-| Delivery | JSON pages over REST, MCP, SDKs, CLI, n8n, Prefect, and Apify datasets |
-| Integrations | REST, MCP, Skills, typed SDKs, CLI, Terraform, n8n, Prefect, and Apify Actors |
+| Delivery | JSON pages over REST, MCP, SDKs, CLI, n8n, Prefect, Haystack, and Apify datasets |
+| Integrations | REST, MCP, Skills, typed SDKs, CLI, Terraform, n8n, Prefect, Haystack, and Apify Actors |
 | X actions | Posts, quotes, threads, deletes, likes, retweets, follows, DMs, and bookmarks |
 
 Deleted, protected, restricted, or unavailable content may stay inaccessible. TwexAPI omits unavailable optional fields. It never invents missing content.
@@ -173,6 +173,7 @@ The npm package `@twexapi-dev/x-developer` contains this Skill and plugin bundle
 | Terraform | Follow, tweet, like, retweet, bookmark, and DM resources | TwexAPI API key |
 | n8n | Tweet search, user lookup, trending tweets, and balance in workflows | TwexAPI API key |
 | Prefect | Scheduled tweet search, profiles, timelines, and trends | TwexAPI API key |
+| Haystack | Tweet search and user timelines as RAG documents | TwexAPI API key |
 | Apify Actor | No-code runs, schedules, datasets, and Apify exports | Apify API token |
 
 Supported public reads need no official X developer account. You do not need to connect or use an X account for those reads. Writes and private DM reads are the exception.
@@ -346,6 +347,23 @@ Read-only tasks:
 
 Source: [prefect-x-api-scraper](https://github.com/twexapi-dev/prefect-x-api-scraper).
 
+### Haystack components
+
+Install `x-api-scraper-haystack`. Components read `X_API_SCRAPER_KEY` and send `Authorization: Bearer`.
+
+```bash
+pip install x-api-scraper-haystack
+```
+
+Read-only components:
+
+| Task | Haystack component | TwexAPI route |
+| --- | --- | --- |
+| Search tweets | `TwexApiTweetSearch` | `POST /twitter/advanced_search/page` |
+| Read a timeline page | `TwexApiUserTweetsFetcher` | `POST /twitter/{screen_name}/timeline/page` |
+
+Source: [x-api-scraper-haystack](https://github.com/twexapi-dev/x-api-scraper-haystack).
+
 ### Apify Actor
 
 The [Tweet(X)/Twitter scraper | $0.05/1K | Pay-Per Result v2](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) Actor accepts this input:
@@ -398,6 +416,7 @@ The Skill does not install packages, run local bridge commands, write local file
 | Operator | CLI with `--dry-run` on writes | Confirmed posts, DMs, or follows |
 | Workflow user | n8n community node | Tweet search, user lookup, and trends in n8n |
 | Pipeline user | Prefect collection | Scheduled search, profiles, timelines, and trends |
+| RAG user | Haystack components | Tweet search and timelines as documents |
 | No-code user | Apify Actor | Scheduled dataset or Console export |
 
 Always store tweet IDs, collection times, filters, and cursors. Deduplicate on stable IDs. Keep a lawful purpose and deletion plan for collected data.
@@ -463,6 +482,7 @@ Get qualified advice for regulated, sensitive, or unclear work.
 | Terraform | [TwexAPI provider](https://registry.terraform.io/providers/twexapi-dev/x-api-scraper/latest) |
 | n8n | [n8n-nodes-x-api-scraper](https://github.com/twexapi-dev/n8n-nodes-x-api-scraper) |
 | Prefect | [prefect-x-api-scraper](https://github.com/twexapi-dev/prefect-x-api-scraper) |
+| Haystack | [x-api-scraper-haystack](https://github.com/twexapi-dev/x-api-scraper-haystack) |
 | Docs | [x-api-scraper-docs](https://github.com/twexapi-dev/x-api-scraper-docs) |
 | Apify | [Tweet scraper $0.05/1K](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) |
 
@@ -475,6 +495,7 @@ Get qualified advice for regulated, sensitive, or unclear work.
 - [TypeScript API map](https://github.com/twexapi-dev/x-api-scraper-typescript/blob/main/api.md)
 - [n8n community node](https://github.com/twexapi-dev/n8n-nodes-x-api-scraper)
 - [Prefect collection](https://github.com/twexapi-dev/prefect-x-api-scraper)
+- [Haystack components](https://github.com/twexapi-dev/x-api-scraper-haystack)
 - [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2)
 
 ## Contract date
