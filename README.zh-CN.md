@@ -31,6 +31,17 @@ curl --request POST 'https://api.twexapi.io/twitter/advanced_search/page' \
 npx skills add twexapi-dev/x-api-scraper
 ```
 
+### LobeHub
+
+使用 LobeHub CLI 0.0.48 或更高版本。登录后安装两个 Skill，再确认：
+
+```bash
+lh login
+lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x-api-scraper
+lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x-api-scraper-research
+lh skill list --source market
+```
+
 ## 能力范围
 
 | 方向 | 支持的工作 |
