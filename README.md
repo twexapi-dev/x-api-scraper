@@ -438,11 +438,13 @@ Get qualified advice for regulated, sensitive, or unclear work.
 | CLI | [x-api-scraper-cli](https://github.com/twexapi-dev/x-api-scraper-cli) |
 | Terraform | [TwexAPI provider](https://registry.terraform.io/providers/twexapi-dev/x-api-scraper/latest) |
 | n8n | [n8n-nodes-x-api-scraper](https://github.com/twexapi-dev/n8n-nodes-x-api-scraper) |
+| Docs | [x-api-scraper-docs](https://github.com/twexapi-dev/x-api-scraper-docs) |
 | Apify | [Tweet scraper $0.05/1K](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) |
 
 ## Documentation and support
 
 - [Documentation](https://docs.twexapi.io)
+- [Docs source](https://github.com/twexapi-dev/x-api-scraper-docs)
 - [MCP](https://docs.twexapi.io/mcp/overview)
 - [Dashboard](https://twexapi.io/dashboard)
 - [TypeScript API map](https://github.com/twexapi-dev/x-api-scraper-typescript/blob/main/api.md)
