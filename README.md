@@ -367,11 +367,29 @@ Source: [x-api-scraper-haystack](https://github.com/twexapi-dev/x-api-scraper-ha
 
 ### Paperclip plugin
 
+Add 6 read-only TwexAPI tools to Paperclip agents for Twitter search, tweet lookup, profiles, timelines, and trending tweets.
+
 Install `@twexapi/paperclip-plugin-x-api-scraper` in Paperclip. The plugin reads a TwexAPI API key from a Paperclip secret and sends `Authorization: Bearer`.
 
 ```bash
 paperclipai plugin install @twexapi/paperclip-plugin-x-api-scraper
 ```
+
+Pin the current release when you need reproducible installs:
+
+```bash
+paperclipai plugin install @twexapi/paperclip-plugin-x-api-scraper --version 0.1.0
+```
+
+npm: [@twexapi/paperclip-plugin-x-api-scraper](https://www.npmjs.com/package/@twexapi/paperclip-plugin-x-api-scraper)
+
+Configuration:
+
+- `apiBaseUrl`: TwexAPI REST endpoint. Defaults to `https://api.twexapi.io`.
+- `apiKeySecretRef`: Paperclip secret reference for the TwexAPI API key.
+- `defaultTimelineCount`, `defaultUserSearchCount`, `defaultTrendCount`: Defaults from 1 to 100.
+
+Create an API key in the [TwexAPI dashboard](https://twexapi.io/dashboard) and store it in a Paperclip secret.
 
 Read-only tools:
 
@@ -383,6 +401,8 @@ Read-only tools:
 | Look up a profile | `twexapi.get_user` | `GET /twitter/{screen_name}/about` |
 | Read profile tweets | `twexapi.get_user_tweets` | `POST /twitter/{screen_name}/timeline/page` |
 | Read trending tweets | `twexapi.get_trends` | `GET /twitter/global-trending/tweets` |
+
+This plugin does not export followers or publish posts. Use the TwexAPI REST API for those tasks.
 
 Source: [paperclip-plugin-x-api-scraper](https://github.com/twexapi-dev/paperclip-plugin-x-api-scraper).
 
