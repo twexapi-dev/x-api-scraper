@@ -378,7 +378,7 @@ paperclipai plugin install @twexapi/paperclip-plugin-x-api-scraper
 Pin the current release when you need reproducible installs:
 
 ```bash
-paperclipai plugin install @twexapi/paperclip-plugin-x-api-scraper --version 0.1.0
+paperclipai plugin install @twexapi/paperclip-plugin-x-api-scraper --version 0.1.1
 ```
 
 npm: [@twexapi/paperclip-plugin-x-api-scraper](https://www.npmjs.com/package/@twexapi/paperclip-plugin-x-api-scraper)
