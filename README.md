@@ -312,7 +312,7 @@ Run `x-api-scraper search tweets --help` before scripting extra flags.
 
 ### n8n community node
 
-Install `n8n-nodes-x-api-scraper` from **Settings → Community Nodes**. Add a TwexAPI API credential. The node sends `Authorization: Bearer`.
+Install `@twexapi-dev/n8n-nodes-x-api-scraper` from **Settings → Community Nodes**. Add a TwexAPI API credential. The node sends `Authorization: Bearer`.
 
 Read-only operations:
 
@@ -369,19 +369,19 @@ Source: [x-api-scraper-haystack](https://github.com/twexapi-dev/x-api-scraper-ha
 
 Add 6 read-only TwexAPI tools to Paperclip agents for Twitter search, tweet lookup, profiles, timelines, and trending tweets.
 
-Install `@twexapi/paperclip-plugin-x-api-scraper` in Paperclip. The plugin reads a TwexAPI API key from a Paperclip secret and sends `Authorization: Bearer`.
+Install `@twexapi-dev/paperclip-plugin-x-api-scraper` in Paperclip. The plugin reads a TwexAPI API key from a Paperclip secret and sends `Authorization: Bearer`.
 
 ```bash
-paperclipai plugin install @twexapi/paperclip-plugin-x-api-scraper
+paperclipai plugin install @twexapi-dev/paperclip-plugin-x-api-scraper
 ```
 
 Pin the current release when you need reproducible installs:
 
 ```bash
-paperclipai plugin install @twexapi/paperclip-plugin-x-api-scraper --version 0.1.1
+paperclipai plugin install @twexapi-dev/paperclip-plugin-x-api-scraper --version 0.1.2
 ```
 
-npm: [@twexapi/paperclip-plugin-x-api-scraper](https://www.npmjs.com/package/@twexapi/paperclip-plugin-x-api-scraper)
+npm: [@twexapi-dev/paperclip-plugin-x-api-scraper](https://www.npmjs.com/package/@twexapi-dev/paperclip-plugin-x-api-scraper)
 
 Configuration:
 
