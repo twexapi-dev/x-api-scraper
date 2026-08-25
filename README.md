@@ -534,6 +534,10 @@ Get qualified advice for regulated, sensitive, or unclear work.
 
 - [Documentation](https://docs.twexapi.io)
 - [Docs source](https://github.com/twexapi-dev/x-api-scraper-docs)
+- [Organization hub](https://github.com/twexapi-dev/.github)
+- [Support policy](https://github.com/twexapi-dev/.github/blob/main/SUPPORT.md)
+- [Security policy](https://github.com/twexapi-dev/.github/blob/main/SECURITY.md)
+- [Contributing](https://github.com/twexapi-dev/.github/blob/main/CONTRIBUTING.md)
 - [MCP](https://docs.twexapi.io/mcp/overview)
 - [Dashboard](https://twexapi.io/dashboard)
 - [TypeScript API map](https://github.com/twexapi-dev/x-api-scraper-typescript/blob/main/api.md)
