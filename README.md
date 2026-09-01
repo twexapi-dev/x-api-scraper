@@ -1,10 +1,10 @@
-# X (Twitter) Scraper API (TwexAPI)
+# TwexAPI Developer Tools
 
 **English** · [Español](README.es.md) · [Türkçe](README.tr.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Italiano](README.it.md)
 
 > TwexAPI is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.
 
-TwexAPI is an X (Twitter) Scraper API and X API alternative. Search tweets, read profiles, paginate followers, and run approved account actions. Use REST, typed SDKs, MCP, CLI tools, Skills, Terraform, n8n, Prefect, Haystack, Paperclip, or Apify.
+TwexAPI provides structured public social data and approved account workflows through REST, typed SDKs, MCP, CLI tools, Skills, Terraform, n8n, Prefect, Haystack, Paperclip, and Apify.
 
 You need an `X_API_SCRAPER_KEY` for the request below. You do not need an official X developer account. Public tweet, profile, search, follower, timeline, reply, quote, and trending reads use the API key only.
 
