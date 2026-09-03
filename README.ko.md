@@ -4,9 +4,9 @@
 
 > TwexAPI는 독립 서드파티 서비스입니다. X Corp와 제휴되어 있지 않습니다. "Twitter"와 "X"는 X Corp의 상표입니다.
 
-TwexAPI는 X(Twitter) Scraper API이자 X API 대안입니다. 트윗 검색, 프로필, 팔로워 페이지네이션, 승인된 계정 작업에 사용합니다. REST, SDK, MCP, CLI, Skill, Terraform, [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2)을 지원합니다.
+TwexAPI는 X(Twitter) Scraper API이자 X API 대안입니다. 트윗 검색, 프로필, 팔로워 등 공개 데이터 조회에 사용합니다. REST, SDK, MCP, CLI, Skill, Terraform, [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2)을 지원합니다.
 
-아래 요청에는 `X_API_SCRAPER_KEY`가 필요합니다. 공개 읽기에는 공식 X 개발자 계정이 필요 없습니다. DM과 쓰기에는 cookie 또는 `auth_token`이 필요합니다. X 비밀번호나 2FA 코드를 보내지 마세요.
+아래 요청에는 `X_API_SCRAPER_KEY`가 필요합니다. 읽기에는 공식 X 개발자 계정이나 X 계정 연결이 필요 없습니다.
 
 ## 요청 한 번 실행
 
@@ -47,7 +47,6 @@ lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x
 | Profiles | 조회, 팔로워, 팔로잉 |
 | Other | 리스트, 커뮤니티, 트렌드, 아티클 |
 | Integrations | REST, MCP, Skills, SDK, CLI, Terraform |
-| Actions | 게시, DM, 팔로우(확인 후) |
 
 ## SDK 및 도구
 
@@ -69,7 +68,7 @@ lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x
 
 ### 공개 읽기에 X 계정 연결이 필요한가요?
 
-아니요. DM과 쓰기만 cookie 또는 `auth_token`이 필요합니다.
+아니요. 트윗, 프로필, 검색, 팔로워, 타임라인 읽기는 API 키만 있으면 됩니다.
 
 ## 문서
 

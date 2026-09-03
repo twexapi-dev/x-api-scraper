@@ -29,12 +29,5 @@ All requests use `Authorization: Bearer <X_API_SCRAPER_KEY>` unless noted.
 | List search | `POST /twitter/list/search` | `client.lists.search` |
 | Article markdown | `GET /x/article/{tweet_id}/markdown` | `client.articles.markdown` |
 | Account balance | `GET /balance` | `client.account.balance` |
-| DM history | `POST /v3/twitter/dm-history` | `client.dm.history` |
-| Send DM | `POST /v3/twitter/send-dm` | `client.dm.send` |
-| Create tweet | `POST /twitter/tweets/create` | `client.tweets.actions.create` |
-| Like / unlike | `POST` / `DELETE` `/twitter/tweets/{tweet_id}/like` | `client.tweets.actions.like` / `unlike` |
-| Follow / unfollow | `POST /twitter/user/follow` | `client.users.follow` / `unfollow` |
-
-Writes and DMs need a cookie or `auth_token` on the request plus explicit user approval.
 
 See the TypeScript [api.md](https://github.com/twexapi-dev/x-api-scraper-typescript/blob/main/api.md) for methods. Open a file under `docs/sdks/` in that repo, such as [search](https://github.com/twexapi-dev/x-api-scraper-typescript/blob/main/docs/sdks/search/README.md), for request fields.

@@ -4,9 +4,9 @@
 
 > TwexAPI è un servizio di terze parti indipendente. Non affiliato a X Corp. "Twitter" e "X" sono marchi di X Corp.
 
-TwexAPI è un’API di scraping X (Twitter) e un’alternativa alla X API. Cerca tweet, leggi profili, pagina i follower ed esegui azioni account confermate. REST, SDK, MCP, CLI, Skills, Terraform, [Actor Apify](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2).
+TwexAPI è un’API di scraping X (Twitter) e un’alternativa alla X API. Cerca tweet, leggi profili, pagina i follower e ottieni dati pubblici strutturati. REST, SDK, MCP, CLI, Skills, Terraform, [Actor Apify](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2).
 
-La richiesta seguente richiede `X_API_SCRAPER_KEY`. Le letture pubbliche non richiedono un account sviluppatore X ufficiale. DM e scritture richiedono anche cookie o `auth_token`. Non inviare mai password X o codici 2FA.
+La richiesta seguente richiede `X_API_SCRAPER_KEY`. Le letture non richiedono un account sviluppatore X ufficiale né collegare un account X.
 
 ## Esegui una richiesta
 
@@ -47,7 +47,6 @@ lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x
 | Profili | Lookup, follower, following |
 | Altro | Liste, community, trend, articoli |
 | Integrazioni | REST, MCP, Skills, SDK, CLI, Terraform |
-| Azioni | Post, DM, follow (dopo conferma) |
 
 ## SDK e strumenti
 
@@ -69,7 +68,7 @@ No. Lo scraping pubblico usa la chiave TwexAPI.
 
 ### Serve un account X collegato per le letture pubbliche?
 
-No. Solo DM e scritture richiedono cookie o `auth_token`.
+No. Le letture di tweet, profili, ricerca, follower e timeline usano solo la API key.
 
 ## Documentazione
 

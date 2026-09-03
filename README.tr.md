@@ -4,9 +4,9 @@
 
 > TwexAPI bağımsız bir üçüncü taraf hizmetidir. X Corp ile bağlantılı değildir. "Twitter" ve "X", X Corp’un markalarıdır.
 
-TwexAPI bir X (Twitter) Scraper API ve X API alternatifidir. Tweet ara, profilleri oku, takipçileri sayfala ve onaylı hesap işlemleri çalıştır. REST, SDK, MCP, CLI, Skill, Terraform veya [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) kullan.
+TwexAPI bir X (Twitter) Scraper API ve X API alternatifidir. Tweet ara, profilleri oku, takipçileri sayfala ve yapılandırılmış herkese açık verileri al. REST, SDK, MCP, CLI, Skill, Terraform veya [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) kullan.
 
-Aşağıdaki istek için `X_API_SCRAPER_KEY` gerekir. Genel okumalar resmi X geliştirici hesabı gerektirmez. DM ve yazmalar için cookie veya `auth_token` da gerekir. X parolası veya 2FA kodu göndermeyin.
+Aşağıdaki istek için `X_API_SCRAPER_KEY` gerekir. Okumalar resmi X geliştirici hesabı veya bağlı bir X hesabı gerektirmez.
 
 ## Bir istek çalıştır
 
@@ -47,7 +47,6 @@ lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x
 | Profiller | Lookup, takipçi, following |
 | Diğer | Listeler, topluluklar, trendler, makaleler |
 | Entegrasyon | REST, MCP, Skills, SDK, CLI, Terraform |
-| İşlemler | Gönderi, DM, takip (onay sonrası) |
 
 ## SDK ve araçlar
 
@@ -69,7 +68,7 @@ Hayır. Genel scraping TwexAPI API anahtarını kullanır.
 
 ### Genel okumalar için X hesabı bağlamak gerekir mi?
 
-Hayır. Yalnızca DM ve yazmalar cookie veya `auth_token` ister.
+Hayır. Tweet, profil, arama, takipçi ve zaman çizelgesi okumaları yalnızca API anahtarı ister.
 
 ## Belgeler
 

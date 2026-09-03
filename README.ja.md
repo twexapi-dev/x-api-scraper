@@ -4,9 +4,9 @@
 
 > TwexAPI は独立した第三者サービスです。X Corp とは提携していません。"Twitter" と "X" は X Corp の商標です。
 
-TwexAPI は X（Twitter）Scraper API および X API の代替です。ツイート検索、プロフィール、フォロワー、承認済みのアカウント操作に使えます。REST、型付き SDK、MCP、CLI、Skill、Terraform、[Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) に対応しています。
+TwexAPI は X（Twitter）Scraper API および X API の代替です。ツイート検索、プロフィール、フォロワーなどの公開データ取得に使えます。REST、型付き SDK、MCP、CLI、Skill、Terraform、[Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) に対応しています。
 
-次のリクエストには `X_API_SCRAPER_KEY` が必要です。公開読み取りに公式 X 開発者アカウントは不要です。DM と書き込みには cookie または `auth_token` が必要です。X のパスワードや 2FA コードは送らないでください。
+次のリクエストには `X_API_SCRAPER_KEY` が必要です。読み取りに公式 X 開発者アカウントや X アカウント接続は不要です。
 
 ## 1 回のリクエスト
 
@@ -43,11 +43,10 @@ lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x
 
 | 領域 | できること |
 | --- | --- |
-| Tweets | 検索、タイムライン、返信、引用、スレッド、いいね、リポスト |
+| Tweets | 検索、タイムライン、返信、引用、スレッド |
 | Profiles | 検索、フォロワー、フォロー中 |
 | Other | リスト、コミュニティ、トレンド、記事 |
 | Integrations | REST、MCP、Skills、SDK、CLI、Terraform |
-| Actions | 投稿、DM、フォロー（確認後） |
 
 ## SDK とツール
 
@@ -69,7 +68,7 @@ lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x
 
 ### 公開読み取りに X アカウントの接続は必要ですか？
 
-いいえ。DM と書き込みだけ cookie または `auth_token` が必要です。
+いいえ。ツイート、プロフィール、検索、フォロワー、タイムラインなどの読み取りは API キーだけで行えます。
 
 ## ドキュメント
 

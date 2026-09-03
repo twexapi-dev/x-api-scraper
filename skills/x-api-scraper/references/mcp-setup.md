@@ -11,7 +11,7 @@ Create a key at https://twexapi.io/dashboard.
 1. `explore` — search the allowlisted REST catalog. No data request.
 2. `twexapi_request` — call an allowlisted relative path such as `/twitter/advanced_search/page`.
 
-Writes are marked `read_only: false`. Require explicit approval before posting, following, liking, or sending DMs.
+Prefer public-read routes for agent workflows.
 
 ## Cursor
 

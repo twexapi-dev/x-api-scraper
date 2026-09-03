@@ -4,9 +4,9 @@
 
 > TwexAPI est un service tiers indépendant. Non affilié à X Corp. "Twitter" et "X" sont des marques de X Corp.
 
-TwexAPI est une API de scraping X (Twitter) et une alternative à l’API X. Recherchez des tweets, lisez des profils, paginez les abonnés et exécutez des actions de compte confirmées. REST, SDK, MCP, CLI, Skills, Terraform, [Actor Apify](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2).
+TwexAPI est une API de scraping X (Twitter) et une alternative à l’API X. Recherchez des tweets, lisez des profils, paginez les abonnés et récupérez des données publiques structurées. REST, SDK, MCP, CLI, Skills, Terraform, [Actor Apify](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2).
 
-La requête ci-dessous nécessite `X_API_SCRAPER_KEY`. Les lectures publiques n’exigent pas de compte développeur X officiel. Les DM et écritures nécessitent aussi un cookie ou `auth_token`. N’envoyez jamais un mot de passe X ni un code 2FA.
+La requête ci-dessous nécessite `X_API_SCRAPER_KEY`. Les lectures n’exigent pas de compte développeur X officiel ni de connexion à un compte X.
 
 ## Exécuter une requête
 
@@ -47,7 +47,6 @@ lh skill install https://github.com/twexapi-dev/x-api-scraper/tree/main/skills/x
 | Profils | Lookup, abonnés, abonnements |
 | Autre | Listes, communautés, tendances, articles |
 | Intégrations | REST, MCP, Skills, SDK, CLI, Terraform |
-| Actions | Publier, DM, suivre (après confirmation) |
 
 ## SDK et outils
 
@@ -69,7 +68,7 @@ Non. Le scraping public utilise votre clé TwexAPI.
 
 ### Faut-il connecter un compte X pour les lectures publiques ?
 
-Non. Les DM et écritures nécessitent cookie ou `auth_token`.
+Non. Les lectures de tweets, profils, recherche, abonnés et timelines utilisent uniquement la clé API.
 
 ## Documentation
 

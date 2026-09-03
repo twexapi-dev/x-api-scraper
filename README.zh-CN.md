@@ -4,9 +4,9 @@
 
 > TwexAPI 是独立第三方服务，与 X Corp 无隶属关系。"Twitter" 和 "X" 是 X Corp 的商标。
 
-TwexAPI 是 X（Twitter）Scraper API 和 X API 替代方案。搜索推文、读取资料、分页粉丝，以及在确认后执行账号操作。可通过 REST、类型化 SDK、MCP、CLI、Skill、Terraform 或 [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) 使用。
+TwexAPI 是 X（Twitter）Scraper API 和 X API 替代方案。搜索推文、读取资料、分页粉丝，并获取结构化公开数据。可通过 REST、类型化 SDK、MCP、CLI、Skill、Terraform 或 [Apify Actor](https://apify.com/fastcrawler/tweet-x-twitter-scraper-0-05-1k-pay-per-result-v2) 使用。
 
-下面的请求需要 `X_API_SCRAPER_KEY`。公开读取不需要官方 X 开发者账号，也不需要连接 X 账号。私信和发帖等写操作还需要请求里的 cookie 或 `auth_token`。不要向 TwexAPI 或 agent 发送 X 密码或 2FA 验证码。
+下面的请求需要 `X_API_SCRAPER_KEY`。读取不需要官方 X 开发者账号，也不需要连接 X 账号。
 
 ## 发送一次请求
 
@@ -53,11 +53,10 @@ lh skill list --source market
 
 | 方向 | 支持的工作 |
 | --- | --- |
-| 推文 | 查询、搜索、时间线、回复、引用、线程、点赞、转推、书签 |
+| 推文 | 查询、搜索、时间线、回复、引用、线程、互动数据 |
 | 资料 | 查询、搜索、粉丝、已认证粉丝、正在关注 |
 | 其他 | 列表、社群、趋势、文章、hashtag、cashtag |
 | 接入 | REST、MCP、Skills、SDK、CLI、Terraform、Apify |
-| 账号操作 | 发帖、引用、线程、删除、点赞、转贴、关注、私信、书签 |
 
 ## SDK 与工具
 
@@ -79,7 +78,7 @@ lh skill list --source market
 
 ### 公开读取需要连接 X 账号吗？
 
-不需要。私信和写操作才需要 cookie 或 `auth_token`。
+不需要。推文、资料、搜索、粉丝、时间线等读取只需 API key。
 
 ## 文档
 

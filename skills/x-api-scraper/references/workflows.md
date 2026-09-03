@@ -37,15 +37,3 @@ const followers = await client.users.followers.list({
 const timeline = await client.timelines.userPage({ screenName: "elonmusk" });
 const replies = await client.tweets.replies.page({ tweetId: "123" });
 ```
-
-## Write actions
-
-Show the payload and wait for approval. Writes need a cookie or `auth_token`.
-
-```ts
-await client.tweets.actions.create({
-  // include cookie / auth fields from the user after approval
-});
-```
-
-Do not retry writes unless the user approves a retry after seeing the error.
