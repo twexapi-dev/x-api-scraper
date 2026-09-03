@@ -12,7 +12,7 @@
     {
       "name": "x-api-scraper",
       "source": "./",
-      "description": "X (Twitter) Scraper API and X API alternative. Use search, followers, SDKs, MCP, and confirmed writes. Not affiliated with X Corp.",
+      "description": "X (Twitter) Scraper API and X API alternative. Use search, followers, SDKs, and MCP for public reads. Not affiliated with X Corp.",
       "version": "0.1.0",
       "author": {
         "name": "TwexAPI"

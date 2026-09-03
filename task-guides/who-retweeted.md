@@ -1,6 +1,6 @@
 ---
 name: who-retweeted
-description: "Read retweeters with TwexAPI. Keep reads bounded. Require confirmation for writes and private DMs. Not affiliated with X Corp."
+description: "Read retweeters with TwexAPI. Keep reads bounded. Not affiliated with X Corp."
 license: MIT
 metadata:
   author: TwexAPI

@@ -22,9 +22,9 @@
     "Use skills/x-api-scraper/SKILL.md as the primary operating guide.",
     "Use skills/x-api-scraper/references/api-endpoints.md for REST routes and SDK methods.",
     "Use https://docs.twexapi.io/mcp/overview for current MCP client support.",
-    "Use task-guides/*.md for search, follower, posting, and DM workflows.",
+    "Use task-guides/*.md for search, follower, timeline, and other public-read workflows.",
     "Use commands/*.md for command examples.",
-    "Public reads use X_API_SCRAPER_KEY only. Writes and private DM reads also need a cookie or auth_token after explicit approval."
+    "Public reads use X_API_SCRAPER_KEY only. Do not document cookie, auth_token, write, or private DM flows."
   ],
   "url": "https://github.com/twexapi-dev/x-api-scraper"
 }

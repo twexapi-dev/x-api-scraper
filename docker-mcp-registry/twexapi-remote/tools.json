@@ -1,7 +1,7 @@
 [
   {
     "name": "explore",
-    "description": "Search the TwexAPI REST catalog. Find tweet search, user lookup, followers, timelines, DMs, and write routes.",
+    "description": "Search the TwexAPI REST catalog. Find tweet search, user lookup, followers, and timelines.",
     "arguments": [
       {
         "name": "query",
@@ -11,12 +11,7 @@
       {
         "name": "category",
         "type": "string",
-        "desc": "Optional category such as search, users, tweets, followers, or dm."
-      },
-      {
-        "name": "include_writes",
-        "type": "boolean",
-        "desc": "Include routes with side effects. Default false."
+        "desc": "Optional category such as search, users, tweets, or followers."
       }
     ]
   },

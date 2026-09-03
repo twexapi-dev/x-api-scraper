@@ -398,7 +398,7 @@ Read-only tools:
 | Read profile tweets | `twexapi.get_user_tweets` | `POST /twitter/{screen_name}/timeline/page` |
 | Read trending tweets | `twexapi.get_trends` | `GET /twitter/global-trending/tweets` |
 
-This plugin does not export followers or publish posts. Use the TwexAPI REST API for those tasks.
+This plugin covers the public-read tools above. Use the TwexAPI REST API or SDK for other public reads such as followers.
 
 Source: [paperclip-plugin-x-api-scraper](https://github.com/twexapi-dev/paperclip-plugin-x-api-scraper).
 

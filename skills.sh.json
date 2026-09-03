@@ -31,16 +31,6 @@
         "x-lists",
         "x-communities"
       ]
-    },
-    {
-      "title": "Publishing",
-      "description": "Publish only after explicit confirmation.",
-      "skills": [
-        "post-tweets",
-        "write-threads",
-        "send-dms",
-        "follow-unfollow"
-      ]
     }
   ]
 }

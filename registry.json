@@ -55,7 +55,7 @@
       "name": "x-api-scraper-research",
       "type": "registry:item",
       "title": "TwexAPI social research Skill",
-      "description": "Bounded public X research reads with TwexAPI. Require approval before DMs or writes. Not affiliated with X Corp.",
+      "description": "Bounded public X research reads with TwexAPI. Not affiliated with X Corp.",
       "files": [
         {
           "path": "skills/x-api-scraper-research/LICENSE",
